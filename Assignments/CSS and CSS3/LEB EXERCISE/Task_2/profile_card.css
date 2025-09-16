@@ -1,0 +1,35 @@
+.container {
+    height: 600px;
+    width: 600px;
+    border: 2px solid black;
+    background-color: rgb(235, 235, 235);
+    border-radius: 15px;
+    margin: auto;
+}
+h2 {
+    color: rgb(113, 34, 34);
+    text-align: center;
+}
+.picture {
+    font-size: 150px;
+    text-align: center;
+}
+h3, p {
+    text-align: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+.button button {
+    border: 1px solid gray;
+    padding: 10px 100px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(149, 149, 149);
+}
+button:hover {
+    background-color: rgb(48, 103, 255);
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
