@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(203, 174, 174);
+}
+
+.main {
+    height: 150px;
+    width: 100%;
+    background-color: rgb(15, 40, 63);
+}
+
+
+.first {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px;
+    padding-top: 15px;
+    height: 70px;
+    font-size: 30px;
+}
+
+p {
+    font-family: "Playwrite AU QLD", cursive;
+    font-weight: 800;
+    text-align: center;
+}
+
+.second {
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 50px;
+    background-image: url("design.jpg");
+    height: 625px;
+    background-size: cover;
+}
+
+.second .another {
+    font-size: 20px;
+}
+
+.second .afirst {
+    font-size: 14px;
+    text-align: left;
+}
