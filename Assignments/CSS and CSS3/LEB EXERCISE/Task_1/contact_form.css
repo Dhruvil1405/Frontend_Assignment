@@ -1,22 +1,20 @@
 body {
+    height: 713px;
     background: #020024;
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 24%, rgba(9, 9, 121, 1) 66%, rgba(6, 82, 170, 1) 94%, rgba(0, 76, 255, 0.78) 100%);
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 18%, rgba(9, 9, 121, 1) 36%, rgb(0, 71, 202) 58%, rgba(5, 71, 226, 0.78) 72%, rgba(71, 125, 251, 0.78) 85%);
     display: grid;
     justify-content: center;
-    position: relative;
-    top: 140px;
+    align-items: center;
 }
 
 .main {
     height: 300px;
     width: 300px;
-    background: #a3b4ff;
-    background: linear-gradient(180deg, rgba(163, 180, 255, 1) 0%, rgba(49, 72, 176, 1) 50%, rgba(27, 69, 168, 1) 71%);
+        background: #a3b4ff;
+        background: linear-gradient(180deg, rgba(163, 180, 255, 1) 0%, rgb(59, 88, 216) 40%, rgb(20, 60, 153) 61%, rgb(13, 44, 117) 80%);
     border: 2px solid black;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: 50px 250px;
     justify-content: center;
     align-items: center;
 }
@@ -43,5 +41,6 @@ button {
 }
 
 button:hover {
-    background-color: rgb(75, 125, 134);
+    color: white;
+    background-color: rgb(14, 108, 216);
 }

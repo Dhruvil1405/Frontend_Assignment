@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #btn {
+            padding: 10px;
+            background-color: #8193e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="demo"></div>
+        <button id="btn" onclick="window.location.href = 'Customer_form.html'">Back</button>
+        <button id="btn" onclick="delData()">Delete</button>
+    </div>
+
+    <script>
+        let data = JSON.parse(localStorage.getItem("storeData"));
+        if (data) {
+            document.getElementById('demo').innerHTML = `
+                <h3>Name: ${data.name}</h3>
+                <h3>Email: ${data.email}</h3>
+                <h3>Event: ${data.event}</h3>
+                <h3>Rating: ${data.rating}</h3>
+                <p>Comment: ${data.comment}</p>
+            `;
+        }
+
+        const delData = () => {
+            localStorage.removeItem('storeData');
+            alert('Data deleted');
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
