@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Bio Link Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .profile h2 { font-size: 22px; }
+    .profile p { color: #666; font-size: 14px; }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-card {
+      padding: 12px;
+      border-radius: 10px;
+      background: #f5f6ff;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .link-card:hover {
+      transform: scale(1.03);
+      background: #e8eaff;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile">
+      <img src="./boys_images.jpg" alt="Profile" />
+      <h2>Dhruvil Patel</h2>
+      <p>Front-End Developer | Designer</p>
+    </div>
+
+    <form id="linkForm">
+      <input type="text" id="platform" placeholder="Platform name (e.g. Instagram)" required />
+      <input type="url" id="url" placeholder="Profile link (https://...)" required />
+      <button type="submit">Add Link</button>
+    </form>
+
+    <div class="links" id="linksContainer">
+      <!-- Preview cards will appear here -->
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('linkForm');
+    const linksContainer = document.getElementById('linksContainer');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const platform = document.getElementById('platform').value;
+      const url = document.getElementById('url').value;
+
+      const linkCard = document.createElement('a');
+      linkCard.href = url;
+      linkCard.target = '_blank';
+      linkCard.className = 'link-card';
+      linkCard.innerText = platform;
+
+      linksContainer.appendChild(linkCard);
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
